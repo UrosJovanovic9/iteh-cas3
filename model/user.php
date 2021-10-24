@@ -12,6 +12,8 @@ class User{
         $this->password = $password;
     }
 
+    
+
     public static function logInUser($usr, mysqli $conn)
     {
         $query = "SELECT * FROM user WHERE username='$usr->username' and password='$usr->password'";
@@ -19,6 +21,8 @@ class User{
         //konekcija sa bazom;
         return $conn->query($query);
     }
+
+
 }
 
 
